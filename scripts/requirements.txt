@@ -1,0 +1,17 @@
+PyMuPDF
+reportlab
+openpyxl
+pandas
+Pillow>=11.3.0
+requests>=2.32.4
+opencv-python
+pytesseract
+#pyocr
+soup_files>=1.4
+convert_stream>=2.4.3
+easyocr
+
+
+
+
+

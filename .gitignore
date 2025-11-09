@@ -1,0 +1,8 @@
+.idea/
+ocr_stream/bin_tess/__pycache__/
+ocr_stream/modules/__pycache__/
+ocr_stream/ocr/__pycache__/
+ocr_stream/__pycache__/
+
+
+
