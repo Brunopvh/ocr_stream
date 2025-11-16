@@ -6,10 +6,10 @@ from abc import abstractmethod, ABC
 from typing import Union
 from pandas import DataFrame
 from soup_files import File
-from convert_stream import DocumentPdf, PageDocumentPdf, DictTextTable
+from convert_stream import DocumentPdf, PageDocumentPdf
 from convert_stream.mod_types.modules import DEFAULT_LIB_IMAGE, LibImage
 from convert_stream.image import ImageObject
-from sheet_stream.type_utils import MetaDataFile
+from sheet_stream import MetaDataFile, TableDocuments
 from ocr_stream.modules import (
     LibOcr, DEFAULT_LIB_OCR, pytesseract, pyocr, easyocr
 )
@@ -77,7 +77,7 @@ class TextRecognized(object):
         tmp_doc.metadata.dir_path = self.metadata.dir_path
         return tmp_doc
 
-    def to_dict(self, separator: str = '\n') -> DictTextTable:
+    def to_dict(self, separator: str = '\n') -> TableDocuments:
         return self.to_page_pdf().to_dict(separator=separator)
 
     def to_dataframe(self, separator='\n') -> DataFrame:
