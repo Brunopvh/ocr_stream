@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ocr_stream"
-version = "2.5"
+version = "2.5.1"
 authors = [
   { name="Bruno Chaves"},
 ]
@@ -21,7 +21,7 @@ dependencies = [
     "requests>=2.32.4",
     "opencv-python",
     "pytesseract",
-    "convert_stream>=2.5",
+    "convert_stream>=2.5.1",
     "soup_files>=1.4.2",
 ]
 
