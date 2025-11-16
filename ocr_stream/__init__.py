@@ -8,13 +8,12 @@ from ocr_stream.recognize import RecognizeImage, RecognizePdf
 from convert_stream import DocumentPdf
 from convert_stream.image import ImageObject
 from sheet_stream import (
-    TableRow, TableDocuments, TableTextKeyWord, VoidAdapter, ColumnsTable,
-    HeadValues, HeadCell, TableDocuments, MetaDataFile, MetaDataItem
+    ColumnsTable, HeadValues, HeadCell, TableDocuments
 )
 from convert_stream.text.find_text import FindText
 import pandas as pd
 from soup_files import (
-    JsonConvert, ProgressBarAdapter, ABCProgressBar, CreatePbar,
+    JsonConvert, ProgressBarAdapter, CreatePbar,
     Directory, File, InputFiles, LibraryDocs
 )
 
