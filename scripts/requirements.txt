@@ -7,9 +7,9 @@ requests>=2.32.4
 opencv-python
 pytesseract
 #pyocr
-soup_files>=1.4
-convert_stream>=2.4.3
-easyocr
+soup_files>=1.4.2
+convert_stream>=2.5
+#easyocr
 
 
 

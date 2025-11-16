@@ -7,10 +7,11 @@ from ocr_stream.ocr import TesseractOcr, TextRecognized
 from ocr_stream.recognize import RecognizeImage, RecognizePdf
 from convert_stream import DocumentPdf
 from convert_stream.image import ImageObject
-from sheet_stream.type_utils import HeadValues, HeadCell
-from sheet_stream import TableRow, TableDocuments, TableTextKeyWord, VoidAdapter, ColumnsTable
-from convert_stream.mod_types import DictTextTable
-from convert_stream.text import FindText, FindStrings
+from sheet_stream import (
+    TableRow, TableDocuments, TableTextKeyWord, VoidAdapter, ColumnsTable,
+    HeadValues, HeadCell, TableDocuments, MetaDataFile, MetaDataItem
+)
+from convert_stream.text.find_text import FindText
 import pandas as pd
 from soup_files import (
     JsonConvert, ProgressBarAdapter, ABCProgressBar, CreatePbar,
@@ -71,7 +72,7 @@ class SearchableTextImage(object):
     """
     def __init__(self, silent: bool = False):
         self.silent = silent
-        self.elements: DictTextTable = DictTextTable.create_void_dict()
+        self.elements: TableDocuments = TableDocuments.create_void_dict()
 
     def __repr__(self):
         return f'SearchableTextPdf: {self.elements}'

@@ -47,6 +47,7 @@ elif MOD_PYTESSERACT:
     DEFAULT_LIB_OCR = LibOcr.PYTESSERACT
 elif MOD_EASYOCR:
     ModuleOcr: TypeAlias = Union[easyocr]
+    DEFAULT_LIB_OCR = LibOcr.EASYOCR
 elif MOD_PYOCR:
     ModuleOcr: TypeAlias = Union[pyocr]
     DEFAULT_LIB_OCR = LibOcr.PYOCR
